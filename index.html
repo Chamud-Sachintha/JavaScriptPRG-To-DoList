@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+web">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To-Do List</title>
+    <style>
+        .btn-extra
+        {
+            width: 140px;
+            height: 40px;
+            background-color: #9400D3;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            font-size: medium;
+        }
+
+        .add-btn
+        {
+            background-color: #44a6c6;
+            color: white;
+            font-size: large;
+            padding: 10px;
+            padding-right: 145px;
+            padding-left: 145px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clear" style="font-size: 0.5rem;">
+                <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-refresh"></span> Clear List
+                </button>
+            </div>
+            <div id="date">
+
+            </div>
+        </div>
+        <div class="content">
+            <ul id = "list">
+                <!-- this is where list apper in the container-->
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default btn-sm add-btn" onclick=DisplayAddToDo()>
+            <span class="material-icons"></span> Add To-Do
+        </button>
+        <div id="displaytextbox"><!--This section will not display until user click add-to-do button-->
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input_text" placeholder="Type To-Do">
+            </div>
+            <div class="add-to-do">
+                <button type="button" class="btn btn-default btn-sm" style="padding-right:63px;padding-left:63px;" onclick=GetTheUserInput()>
+                    <span class="glyphicon glyphicon-refresh"></span> Save
+                </button>
+                <button type="button" class="btn btn-default btn-sm" style="padding-right:63px;padding-left:63px;" onclick=cleartextbox()>
+                    <span class="glyphicon glyphicon-refresh"></span> Cancle
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
